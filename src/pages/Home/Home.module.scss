@@ -1,0 +1,118 @@
+.wrapper {
+    width: 100%;
+}
+.main {
+    height: 100vh;
+}
+.main__container {
+    width: 85%;
+    margin: 0 auto;
+}
+.main__header {
+    display: flex;
+    justify-content: center;
+}
+.mainHeader__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.mainHeader__experience {
+    width: 260px;
+    background-color: #EFEFEF;
+    color: #000000;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 26px;
+    height: 45px;
+    box-shadow: 6px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 4px 0 5px 0;
+}
+.mainHeader__experience > p {
+    width: 235px;
+    margin: 0 auto;
+    font-size: 18px;
+    font-family: 'PT Sans Narrow', sans-serif;
+    letter-spacing: 0.14em;
+}
+.triangleBottom {
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 15px solid #EFEFEF;
+}
+.mainHeadline {
+    color: #FFFFFF;
+    font-size: 40px;
+    text-align: center;
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+.mainHeadline > p {
+    letter-spacing: 0.14em;
+}
+.mainHeadline__description {
+    width: 56.25%;
+    font-size: 18px;
+    text-align: center;
+    color: #B8B4B4;
+    margin: 0 auto;
+    margin-top: 10px;
+    font-family: 'Jura';
+}
+.mainContent {
+    width: 100%;
+}
+.mainContent__headline {
+    color: #0390FB;
+    font-size: 70px;
+    text-align: center;
+    letter-spacing: 0.09em;
+    line-height: 75px;
+    margin-top: 25px;
+}
+.mainContent__headline > p {
+    width: 85%;
+    margin: 0 auto;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.mainContent__items {
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+.mainContent__items > .mainContent__itemWrapper {
+    margin-left: 15px;
+}
+.mainContent__item {
+    margin-top: 25px;
+    // background-color: #0390FB;
+}
+.mainContent__itemPhoto {
+    position: relative;
+    bottom: 80px;
+}
+.mainContent__itemHeadline {
+    display: flex;
+    color: #FFFFFF;
+    font-family: 'Jura', sans-serif;
+    align-items: center;
+    font-size: 18px;
+}
+.mainContent__itemText {
+   color: #B9B9B9;
+   font-family: 'Jura', sans-serif;
+   font-size: 13px;
+   display: flex;
+   justify-content: right;
+   text-align: right;
+   margin-top: -10px;
+   width: 90%;
+}
+.mainContent__itemText > p {
+    width: 60%;
+    text-align: right;
+}
+
