@@ -72,7 +72,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className={styles.mainContent__item}>
-                                <img className={styles.mainContent__itemPhoto} width={400} src={PhotoMain} alt="No img found" />
+                                <img className={styles.mainContent__itemPhoto} width={350} src={PhotoMain} alt="No img found" />
                             </div>
                             <div className={styles.mainContent__itemWrapper}>
                                 <div className={styles.mainContent__item}>
@@ -117,8 +117,17 @@ const Home = () => {
                             </div>
                         </div>
                    </div>
+
+                   <div className={styles.mainContent__btnWrapper}>
+                        <div className={styles.mainContent__btnLabel}>
+                           <p>БЕСПЛАТНО</p>
+                        </div>
+                        <div className={styles.mainContent__btn}>
+                            <button>Записаться на пробное занятие</button>
+                        </div>
+                   </div>
+
                 </div>
-                
             </div>
                
            

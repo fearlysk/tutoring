@@ -2,7 +2,8 @@
     width: 100%;
 }
 .main {
-    height: 100vh;
+    height: auto;
+    padding-bottom: 30px;
 }
 .main__container {
     width: 85%;
@@ -88,11 +89,9 @@
 }
 .mainContent__item {
     margin-top: 25px;
-    // background-color: #0390FB;
 }
 .mainContent__itemPhoto {
-    position: relative;
-    bottom: 80px;
+    margin-top: -80px;
 }
 .mainContent__itemHeadline {
     display: flex;
@@ -115,4 +114,41 @@
     width: 60%;
     text-align: right;
 }
-
+.mainContent__btnWrapper {
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: -100px;
+}
+.mainContent__btnLabel {
+    background-color: #E3DEDE;
+    position: relative;
+    top: 10px;
+    width: 180px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 5px 0px;
+    border-radius: 6px;
+    font-family: 'Source Sans Pro', sans-serif;
+    letter-spacing: 0.08em;
+    z-index: 1;
+}
+.mainContent__btn > button {
+   width: 100%;
+   background: linear-gradient(179.35deg, #037CEC 0.56%, rgb(71, 146, 145));
+   color: #FFFFFF;
+   font-size: 20px;
+   border-radius: 20px;
+   border: 1px solid transparent;
+   height: 70px;
+   font-family: 'Source Sans Pro', sans-serif;
+   letter-spacing: 0.04em;
+   transition: 0.3s;
+}
+.mainContent__btn > button:hover {
+    transform: scale(1.05);
+    transition: 0.3s;
+    cursor: pointer;
+    border: 1px solid #E3DEDE;
+}
