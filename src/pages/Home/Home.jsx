@@ -32,7 +32,7 @@ const Home = () => {
                    <div className={styles.main__header}>
                         <div className={styles.mainHeader__container}>
                             <div className={styles.mainHeader__experience}>
-                                <p>7 лет готовлю к ЦТ</p>
+                                <p>7 лет готовлю к ЦТШКЕ</p>
                                 <p>на 90 баллов+</p>
                             </div>
                             <div className={styles.triangleBottom}></div>
@@ -42,7 +42,7 @@ const Home = () => {
                         <p>Анна Сластенко</p>
                    </div>
                    <div className={styles.mainHeadline__description}>
-                        <p>Онлайн и оффлайн занятия в Беларуси для успешной сдачи ЦТ
+                        <p>Онлайн и оффлайн занятия в Беларуси для успешной сдачи ЦТЭШКИ
                         Без  стресса и времени траты на дорогу
                         </p>
                    </div>
