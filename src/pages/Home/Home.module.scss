@@ -266,16 +266,16 @@
     padding-top: 50px;
     padding-bottom: 50px;
 }
+.situations__header {
+    display: flex;
+    align-items: center;
+}
 .situations__content h2 {
     margin-left: 10px;
     font-size: 40px;
     font-family: 'Jura';
     font-weight: 500;
     letter-spacing: 0.1em;
-}
-.situations__header {
-    display: flex;
-    align-items: center;
 }
 .situations__items {
     display: flex;
@@ -293,6 +293,14 @@
 }
 .situations__photo img {
     height: 200px;
+}
+.situations__girlCry {
+    position: relative;
+    top:9px;
+}
+.situations__boyWow {
+    position: relative;
+    top:38px;
 }
 .situations__text p {
     font-size:25px;

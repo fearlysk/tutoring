@@ -197,7 +197,7 @@ const Home = () => {
                   </div>
                   <div className={styles.situations__item}>
                      <div className={styles.situations__photo}>
-                         <img src={GirlCry} alt="No img found" />
+                         <img className={styles.situations__girlCry} src={GirlCry} alt="No img found" />
                      </div>
                      <div className={styles.situations__text}>
                          <p>Путаешься в дискриминанте и теореме Виета</p>
