@@ -1,7 +1,12 @@
 import BackgroundMain from "../../assets/pages/Home/images/main_background.png";
 import PhotoMain from "../../assets/pages/Home/images/main_photo.png";
 import PhotoAbout from "../../assets/pages/Home/images/about_photo.png";
+import BoyNo from "../../assets/pages/Home/images/boy__no.png";
+import GirlBomb from "../../assets/pages/Home/images/girl__bomb.png";
+import GirlCry from "../../assets/pages/Home/images/girl__cry.png";
+import BoyWow from "../../assets/pages/Home/images/boy__wow.png";
 import IconPaper from "../../components/UI/IconPaper";
+import IconLight from "../../components/UI/IconLight";
 import classNames from 'classnames/bind';
 import styles from "./Home.module.scss";
 import useWindowDimensions from "../../utils/getWindowDimensions";
@@ -172,7 +177,52 @@ const Home = () => {
                 <img src={PhotoAbout} alt="No img found" />
               </div>
             </div>  
-            <div></div>   
+
+            <div className={styles.situations}>
+              <div className={styles.situations__content}>
+                <div className={styles.situations__header}>
+                    <div className={styles.situations__icon}>
+                        <IconLight />
+                    </div>
+                    <h2>Записывайся ко мне на занятия, если</h2>
+                </div>
+                <div className={styles.situations__items}>
+                  <div className={styles.situations__item}>
+                     <div className={styles.situations__photo}>
+                         <img src={GirlBomb} alt="No img found" />
+                     </div>
+                     <div className={styles.situations__text}>
+                         <p>Считаешь, что математика - не твоё</p>
+                     </div>
+                  </div>
+                  <div className={styles.situations__item}>
+                     <div className={styles.situations__photo}>
+                         <img className={styles.situations__girlCry} src={GirlCry} alt="No img found" />
+                     </div>
+                     <div className={styles.situations__text}>
+                         <p>Путаешься в дискриминанте и теореме Виета</p>
+                     </div>
+                  </div>
+                  <div className={styles.situations__item}>
+                     <div className={styles.situations__photo}>
+                         <img className={styles.situations__boyWow} src={BoyWow} alt="No img found" />
+                     </div>
+                     <div className={styles.situations__text}>
+                         <p>Ты не знаешь, как легко считать площади</p>
+                     </div>
+                  </div>
+                  <div className={styles.situations__item}>
+                     <div className={styles.situations__photo}>
+                         <img src={BoyNo} alt="No img found" />
+                     </div>
+                     <div className={styles.situations__text}>
+                         <p>Ты не умеешь складывать числа</p>
+                     </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>   
             <div></div>  
             <div></div>
     
