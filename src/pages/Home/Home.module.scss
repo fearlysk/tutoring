@@ -241,15 +241,61 @@
     width: 100%;
 }
 .about__contentItem {
-    margin-top: 100px;
+    margin-top: 50px;
     width: 70%;
 }
 .about__contentItem > h1 {
-    font-size: 100px;
+    font-size: 70px;
     font-family: 'Source Sans Pro', sans-serif;
     letter-spacing: 9px;
 }
 .about__contentItem > p {
-    font-size: 38px;
+    font-size: 35px;
     font-family: 'Jura', sans-serif;
+}
+.about__photo img{
+    width: 600px;
+}
+.situations {
+    background-color: #052028;
+    color:#FFFFFF;
+}
+.situations__content {
+    width: 81.5%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.situations__content h2 {
+    margin-left: 10px;
+    font-size: 40px;
+    font-family: 'Jura';
+    font-weight: 500;
+    letter-spacing: 0.1em;
+}
+.situations__header {
+    display: flex;
+    align-items: center;
+}
+.situations__items {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px;
+    // align-items: center;
+}
+.situations__item {
+    width: 20%;
+}
+.situations__text p{
+    margin-top: 25px;
+    width: 110%;
+    letter-spacing: 0.1em;
+}
+.situations__photo img {
+    height: 200px;
+}
+.situations__text p {
+    font-size:25px;
+    font-family: 'Jura';
+    font-weight: 500;
 }
