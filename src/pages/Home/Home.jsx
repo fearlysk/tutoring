@@ -47,9 +47,7 @@ const Home = () => {
                         <p>Анна Сластенко</p>
                    </div>
                    <div className={styles.mainHeadline__description}>
-                        <p>Онлайн и оффлайн занятия в Беларуси для успешной сдачи ЦТ
-                        Без  стресса и времени траты на дорогу
-                        </p>
+                        <p>Оффлайн занятия в Минске для успешной сдачи экзаменов, самостоятельных и контрольных работ</p>
                    </div>
                    <div className={styles.mainContent}>
                         <div className={styles.mainContent__headline}>
@@ -63,11 +61,11 @@ const Home = () => {
                                         <IconPaper />
                                     </div>
                                     <div className={styles.mainContent__itemHeadlineText}>
-                                        <p>Сдай ЦТ на высокий балл</p>
+                                        <p>Сдай хорошо свой первый экзамен</p>
                                     </div>
                                   </div>
                                   <div className={styles.mainContent__itemText}>
-                                    <p>и поступи в ВУЗ мечты или престижную школу </p>
+                                    <p>без стресса и волнений</p>
                                   </div>
                                 </div>
                                 <div className={itemClassName}>
@@ -76,11 +74,11 @@ const Home = () => {
                                         <IconPaper />
                                     </div>
                                     <div className={styles.mainContent__itemHeadlineText}>
-                                        <p>Сдай ЦТ на высокий балл</p>
+                                        <p>Стань уверенне на уроках</p>
                                     </div>
                                   </div>
                                   <div className={styles.mainContent__itemText}>
-                                    <p>и поступи в ВУЗ мечты или престижную школу </p>
+                                    <p>и докажи себе, что ты можешь </p>
                                   </div>
                                 </div>
                                 <div className={itemClassName}>
@@ -89,11 +87,11 @@ const Home = () => {
                                         <IconPaper />
                                     </div>
                                     <div className={styles.mainContent__itemHeadlineText}>
-                                        <p>Сдай ЦТ на высокий балл</p>
+                                        <p>Комфортные занятия с чаем и конфетками</p>
                                     </div>
                                   </div>
                                   <div className={styles.mainContent__itemText}>
-                                    <p>и поступи в ВУЗ мечты или престижную школу </p>
+                                    <p>Важно заинтересовать ребёнка, чтобы он с радостью шёл на занятия</p>
                                   </div>
                                 </div>
                             </div>
@@ -104,7 +102,7 @@ const Home = () => {
                                      <p>БЕСПЛАТНО</p>
                                   </div>
                                   <div className={styles.mainContent__btn}>
-                                      <button>Записаться на пробное занятие</button>
+                                      <button>Записаться на занятие</button>
                                   </div>
                                 </div>
                             </div>
@@ -115,11 +113,11 @@ const Home = () => {
                                         <IconPaper />
                                     </div>
                                     <div className={styles.mainContent__itemHeadlineText}>
-                                        <p>Сдай ЦТ на высокий балл</p>
+                                        <p>Полюби математику</p>
                                     </div>
                                   </div>
                                   <div className={styles.mainContent__itemText}>
-                                    <p>и поступи в ВУЗ мечты или престижную школу </p>
+                                    <p>Так же как и я</p>
                                   </div>
                                 </div>
                                 <div className={itemClassName}>
@@ -128,11 +126,11 @@ const Home = () => {
                                         <IconPaper />
                                     </div>
                                     <div className={styles.mainContent__itemHeadlineText}>
-                                        <p>Сдай ЦТ на высокий балл</p>
+                                        <p>Подружись с Пифагором и Виетом</p>
                                     </div>
                                   </div>
                                   <div className={styles.mainContent__itemText}>
-                                    <p>и поступи в ВУЗ мечты или престижную школу </p>
+                                    <p>Все сложные задачки станут для тебя элементарными</p>
                                   </div>
                                 </div>
                                 <div className={itemClassName}>
@@ -141,7 +139,7 @@ const Home = () => {
                                         <IconPaper />
                                     </div>
                                     <div className={styles.mainContent__itemHeadlineText}>
-                                        <p>Сдай ЦТ на высокий балл</p>
+                                      <p>Развивай логику и мышление</p>
                                     </div>
                                   </div>
                                   <div className={styles.mainContent__itemText}>
@@ -151,7 +149,6 @@ const Home = () => {
                             </div>
                         </div>
                    </div>
-
                 </div>
             </div>
                
@@ -221,8 +218,8 @@ const Home = () => {
                   </div>
                 </div>
               </div>
-
             </div>   
+           
             <div></div>  
             <div></div>
     
