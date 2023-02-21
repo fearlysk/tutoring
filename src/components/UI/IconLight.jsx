@@ -7,5 +7,3 @@ const IconLight = () => {
 }
 
 export default IconLight;
-
-

@@ -253,12 +253,74 @@
     font-size: 35px;
     font-family: 'Jura', sans-serif;
 }
-.about__photo img{
+.about__photo > img{
     width: 600px;
+}
+@media screen and (max-width: 1246px) {
+    .about__contentItem > h1 {
+        font-size: 50px;
+    }
+    .about__contentItem > p {
+        font-size: 25px;
+    }
+    .about__photo > img{
+        width: 500px;
+    }
+}
+@media screen and (max-width: 1246px) {
+    .about__contentItem > h1 {
+        font-size: 40px;
+    }
+    .about__contentItem > p {
+        font-size: 20px;
+    }
+    .about__photo > img{
+        width: 400px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .about__contentItem {
+        margin-top: 20px;
+        width: 70%;
+    }
+    .about__photo > img{
+        width: 350px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .about__contentItem > p {
+        font-size: 16px;
+    }
+    .about__photo > img{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .about__contentItem > h1 {
+        font-size: 30px;
+    }
+    .about__contentItem > p {
+        font-size: 16px;
+    }
+    .about__photo > img{
+        width: 300px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .about {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+    }
+    .about__photo > img{
+        margin-top: 25px;
+    }
 }
 .situations {
     background-color: #052028;
-    color:#FFFFFF;
+    color: #FFFFFF;
 }
 .situations__content {
     width: 81.5%;
@@ -281,7 +343,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 40px;
-    // align-items: center;
 }
 .situations__item {
     width: 20%;
@@ -290,20 +351,88 @@
     margin-top: 25px;
     width: 110%;
     letter-spacing: 0.1em;
+    font-size: 25px;
+    font-family: "Jura", sans-serif;
+    font-weight: 500;
 }
-.situations__photo img {
+.situations__photo > img {
     height: 200px;
+}
+@media screen and (max-width: 1246px) {
+    .situations__content h2 {
+        font-size: 30px;
+    }
+    .situations__text p {
+        font-size: 20px;
+    }
+    .situations__photo > img {
+        height: 170px;
+    }
 }
 .situations__girlCry {
     position: relative;
-    top:9px;
+    top: 9px;
 }
 .situations__boyWow {
     position: relative;
-    top:38px;
+    top: 38px;
 }
-.situations__text p {
-    font-size:25px;
-    font-family: 'Jura';
-    font-weight: 500;
+@media screen and (max-width: 1134px) {
+    .situations__content h2 {
+        font-size: 25px;
+    }
+    .situations__text p {
+        font-size: 17px;
+    }
+    .situations__photo > img {
+        height: 150px;
+    }
+    .situations__boyWow {
+        position: relative;
+        top: 20px;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .situations__content h2 {
+        font-size: 20px;
+    }
+    .situations__text p {
+        font-size: 15px;
+    }
+    .situations__photo > img {
+        height: 140px;
+    }
+    .situations__boyWow {
+        position: relative;
+        top: 20px;
+    }
+}
+@media screen and (max-width: 900px) {
+    .situations__items {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    } 
+    .situations__item {
+        display: flex;
+        width: 60%;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .situations__text p {
+        font-size: 20px;
+    }
+    .situations__photo > img {
+        height: 150px;
+    }
+}
+@media screen and (max-width: 450px) {
+    .situations__text p {
+        font-size: 15px;
+        width: 100%;
+    }
+    .situations__photo > img {
+        height: 140px;
+    }
 }
