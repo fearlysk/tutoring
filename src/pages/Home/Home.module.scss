@@ -38,10 +38,11 @@
     .mainContent__textItem {
         width: 100% !important;
         display: flex;
-        flex-direction: row-reverse !important;
+        flex-direction: column-reverse !important;
     }
     .mainContent__itemHeadline {
         flex-direction: row-reverse;
+        justify-content: left;
     }
     .mainContent__items :nth-child(1), .mainContent__items :nth-child(3) {
         order: 2 !important;
@@ -59,6 +60,10 @@
 @media screen and (max-width: 711px) {
     .mainContent__headline {
         font-size: 60px !important;
+    }
+    .mainContent__item {
+        margin-top: 25px;
+        margin-right: 0px !important;
     }
 }
 @media screen and (max-width: 617px) {
@@ -156,16 +161,20 @@
     font-family: 'Source Sans Pro', sans-serif;
 }
 .mainContent__items {
-    margin: 20px auto;
+    margin: 10px auto 25px auto;
     display: flex;
     justify-content: space-between;
-    width: 85%;
+    width: 88%;
 }
 .mainContent__items > .mainContent__itemWrapper {
-    margin-left: 15px;
+    margin-left: 35px;
 }
 .mainContent__item {
     margin-top: 25px;
+    margin-right: 20px;
+}
+.mainContent__itemHeadlineText > p { 
+    margin-left: 10px !important;
 }
 .mainContent__itemPhoto {
     margin-top: -80px;
@@ -182,14 +191,13 @@
    font-family: 'Jura', sans-serif;
    font-size: 13px;
    display: flex;
-   justify-content: right;
-   text-align: right;
-   margin-top: -10px;
-   width: 90%;
+   width: 100%;
+   word-wrap: break-word;
 }
 .mainContent__itemText > p {
-    width: 60%;
-    text-align: right;
+    width: 100%;
+    text-align: left;
+    margin-top: 10px;
 }
 .mainContent__btnWrapper {
     width: 370px;
@@ -232,7 +240,6 @@
 .about {
     display: flex;
     justify-content: space-between;
-    width: 100%;
 }
 .about__content {
     display: flex;
@@ -253,19 +260,9 @@
     font-size: 35px;
     font-family: 'Jura', sans-serif;
 }
-.about__photo > img{
-    width: 600px;
-}
-@media screen and (max-width: 1246px) {
-    .about__contentItem > h1 {
-        font-size: 50px;
-    }
-    .about__contentItem > p {
-        font-size: 25px;
-    }
-    .about__photo > img{
-        width: 500px;
-    }
+.about__photo > img {
+    height: 100%;
+    width: 100%;
 }
 @media screen and (max-width: 1246px) {
     .about__contentItem > h1 {
@@ -274,25 +271,12 @@
     .about__contentItem > p {
         font-size: 20px;
     }
-    .about__photo > img{
-        width: 400px;
-    }
+    
 }
 @media screen and (max-width: 900px) {
     .about__contentItem {
         margin-top: 20px;
         width: 70%;
-    }
-    .about__photo > img{
-        width: 350px;
-    }
-}
-@media screen and (max-width: 700px) {
-    .about__contentItem > p {
-        font-size: 16px;
-    }
-    .about__photo > img{
-        width: 300px;
     }
 }
 @media screen and (max-width: 700px) {
@@ -302,9 +286,7 @@
     .about__contentItem > p {
         font-size: 16px;
     }
-    .about__photo > img{
-        width: 300px;
-    }
+
 }
 @media screen and (max-width: 550px) {
     .about {
@@ -314,7 +296,7 @@
         align-items: center;
         justify-content: center;
     }
-    .about__photo > img{
+    .about__photo > img {
         margin-top: 25px;
     }
 }
@@ -347,7 +329,7 @@
 .situations__item {
     width: 20%;
 }
-.situations__text p{
+.situations__text > p {
     margin-top: 25px;
     width: 110%;
     letter-spacing: 0.1em;
@@ -402,12 +384,11 @@
     .situations__photo > img {
         height: 140px;
     }
-    .situations__boyWow {
-        position: relative;
-        top: 20px;
-    }
 }
 @media screen and (max-width: 900px) {
+    .situations {
+        margin-top: -4px;
+    }
     .situations__items {
         flex-direction: column;
         align-items: center;
@@ -431,8 +412,5 @@
     .situations__text p {
         font-size: 15px;
         width: 100%;
-    }
-    .situations__photo > img {
-        height: 140px;
     }
 }
