@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/tutoring/static/css/main.1717a046.css",
+    "main.js": "/tutoring/static/js/main.6c1a2448.js",
+    "static/media/about_photo.png": "/tutoring/static/media/about_photo.2048fe062de81b9dbba7.png",
+    "static/media/main_background.png": "/tutoring/static/media/main_background.cb843dc02172c4b2deaf.png",
+    "static/media/main_photo.png": "/tutoring/static/media/main_photo.be8ad724074d42bfd8f9.png",
+    "static/media/boy__no.png": "/tutoring/static/media/boy__no.9aa213934c7079dcd61f.png",
+    "static/media/girl__bomb.png": "/tutoring/static/media/girl__bomb.7328e91ff67c54fcf141.png",
+    "static/media/girl__cry.png": "/tutoring/static/media/girl__cry.f63a02752f6aa80b3e40.png",
+    "static/media/boy__wow.png": "/tutoring/static/media/boy__wow.3136c4b4395b8c854fe8.png",
+    "index.html": "/tutoring/index.html",
+    "main.1717a046.css.map": "/tutoring/static/css/main.1717a046.css.map",
+    "main.6c1a2448.js.map": "/tutoring/static/js/main.6c1a2448.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1717a046.css",
+    "static/js/main.6c1a2448.js"
+  ]
+}
