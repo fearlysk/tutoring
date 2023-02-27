@@ -7,6 +7,8 @@ import GirlCry from "../../assets/pages/Home/images/girl__cry.png";
 import BoyWow from "../../assets/pages/Home/images/boy__wow.png";
 import IconPaper from "../../components/UI/IconPaper";
 import IconLight from "../../components/UI/IconLight";
+import IconTeacher from "../../components/UI/IconTeacher";
+import cn from 'classnames';
 import classNames from 'classnames/bind';
 import styles from "./Home.module.scss";
 import useWindowDimensions from "../../utils/getWindowDimensions";
@@ -220,8 +222,60 @@ const Home = () => {
                 </div>
               </div>
 
-            </div>   
-            <div></div>  
+            </div>  
+
+            <div>
+                <div className={styles.results}>
+                    <div className={styles.results__content}>
+                      <div className={styles.results__header}>
+                        <IconLight />
+                        <h2>Что тебя ждёт после обучения со мной?</h2>
+                      </div>
+                      <div className={styles.results__main}>
+                        <div className={styles.result__left}>
+                          <div className={styles.result__leftContent}>
+                             <div className={styles.result__leftItem}>
+                                  <span>01</span>
+                                  <h3>Повышение успеваемости</h3>
+                                  <p>
+                                    я смогу тебя заинтересовать, математика - это не куча занудных формул, а интересные ассоциации с понятыми для тебя вещами
+                                  </p>
+                             </div>
+                             <div className={styles.result__leftItem}>
+                                  <span>02</span>
+                                  <h3>Повышение успеваемости</h3>
+                                  <p>
+                                    контрольные и самостоятельные работы больше не будут тебя пугать,ты все сможешь сдать самостоятельно на хороший балл
+                                  </p>
+                             </div>
+                          </div>
+                        </div>
+                        <div className={styles.resultIcon}>
+                          <IconTeacher />
+                        </div>
+                        <div className={styles.result__left}>
+                          <div className={styles.result__leftContent}>
+                             <div className={styles.result__leftItem}>
+                                  <span>03</span>
+                                  <h3>Повышение успеваемости</h3>
+                                  <p>
+                                    ты будешь уверенно себя чувствовать на занятиях, одноклассники будут просить объяснить домашку
+                                  </p>
+                             </div>
+                             <div className={styles.result__leftItem}>
+                                  <span>04</span>
+                                  <h3>Повышение успеваемости</h3>
+                                  <p>
+                                    ты полюбишь математику и наконец-то сможешь определиться с профессией
+                                  </p>
+                             </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+
+            </div>  
             <div></div>
     
         </div>
