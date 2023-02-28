@@ -119,7 +119,7 @@ const Home = () => {
                                     </div>
                                   </div>
                                   <div className={styles.mainContent__itemText}>
-                                    <p>Так же как и я</p>
+                                    <p>Так же, как и я</p>
                                   </div>
                                 </div>
                                 <div className={itemClassName}>
@@ -151,7 +151,6 @@ const Home = () => {
                             </div>
                         </div>
                    </div>
-
                 </div>
             </div>
                
