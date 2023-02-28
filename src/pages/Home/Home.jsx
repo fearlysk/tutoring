@@ -18,7 +18,8 @@ let cx = classNames.bind(styles);
 const Home = () => {
   
     const { width } = useWindowDimensions();
-    const itemClassName = cx('mainContent__item', 'mainContent__textItem')
+    const itemClassName = cx('mainContent__item', 'mainContent__textItem');
+    const resultItemClassName = cx('result__leftItem', 'result__leftItemRightSide');
 
     const resizeImage = () => {
       let imgSize;
@@ -80,7 +81,7 @@ const Home = () => {
                                     </div>
                                   </div>
                                   <div className={styles.mainContent__itemText}>
-                                    <p>и докажи себе, что ты можешь </p>
+                                    <p>и докажи себе, что ты можешь</p>
                                   </div>
                                 </div>
                                 <div className={itemClassName}>
@@ -223,7 +224,7 @@ const Home = () => {
 
             </div>  
 
-            <div>
+              <div>
                 <div className={styles.results}>
                     <div className={styles.results__content}>
                       <div className={styles.results__header}>
@@ -254,14 +255,14 @@ const Home = () => {
                         </div>
                         <div className={styles.result__left}>
                           <div className={styles.result__leftContent}>
-                             <div className={styles.result__leftItem}>
+                             <div className={resultItemClassName}>
                                   <span>03</span>
                                   <h3>Повышение успеваемости</h3>
                                   <p>
                                     ты будешь уверенно себя чувствовать на занятиях, одноклассники будут просить объяснить домашку
                                   </p>
                              </div>
-                             <div className={styles.result__leftItem}>
+                             <div className={resultItemClassName}>
                                   <span>04</span>
                                   <h3>Повышение успеваемости</h3>
                                   <p>
@@ -273,8 +274,8 @@ const Home = () => {
                       </div>
                     </div>
                 </div>
-
-            </div>  
+              </div>  
+            
             <div></div>
     
         </div>
