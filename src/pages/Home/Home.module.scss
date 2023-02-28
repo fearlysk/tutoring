@@ -260,18 +260,19 @@
     font-size: 35px;
     font-family: 'Jura', sans-serif;
 }
-.about__photo > img {
-    height: 100%;
-    width: 100%;
+.about__photo > img{
+    width: 600px;
 }
 @media screen and (max-width: 1246px) {
     .about__contentItem > h1 {
-        font-size: 40px;
+        font-size: 50px;
     }
     .about__contentItem > p {
-        font-size: 20px;
+        font-size: 25px;
     }
-    
+    .about__photo > img{
+        width: 500px;
+    }
 }
 @media screen and (max-width: 900px) {
     .about__contentItem {
@@ -413,4 +414,63 @@
         font-size: 15px;
         width: 100%;
     }
+    .situations__photo > img {
+        height: 140px;
+    }
+}
+.results__content {
+    width: 81.5%;
+    margin: 0 auto;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.results__header {
+    display: flex;
+}
+.results__main {
+    display: flex;
+}
+.results__header > h2 {
+    font-size: 40px;
+    font-family: 'Jura', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    margin-left: 10px;
+}
+.result__leftContent {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+}
+.result__leftItem {
+    font-size:15px;
+    margin-top: 60px;
+    position: relative;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.13);
+    border-radius: 50px;
+    font-family: 'Jura', sans-serif;
+    letter-spacing: 0.1em;
+    height: 230px;
+    width:100%;
+    padding: 10px 30px 0px 30px;
+    z-index:1;
+    position: relative;
+}
+.result__leftItem > span {
+    font-size: 60px;
+    color:#0390FB;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+}
+.result__leftItem > h3 {
+    margin-bottom: 15px;
+}
+.result__leftItem > p {
+    font-size:15px;
+}
+.resultIcon {
+    margin-top: 60px;
+    margin-left: 3px;
 }
