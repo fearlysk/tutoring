@@ -21,6 +21,7 @@ import styles from "./Home.module.scss";
 import useWindowDimensions from "../../utils/getWindowDimensions";
 import IconDream from "../../components/UI/icons/IconDream";
 import { Carousel } from "../../components/Slider/Carousel";
+import IconContact from "../../components/UI/icons/IconContact";
 
 let cx = classNames.bind(styles);
 
@@ -241,8 +242,8 @@ const Home = () => {
                 <div className={styles.results}>
                     <div className={styles.results__content}>
                       <div className={styles.results__header}>
-                        <IconLight />
-                        <h2>Что тебя ждёт после обучения со мной?</h2>
+                        <div className={styles.results__headerIcon}><IconLight /></div>
+                        <div className={styles.results__headerText}><h2>Что тебя ждёт после обучения со мной?</h2></div>
                       </div>
                       <div className={styles.results__main}>
                         <div className={styles.result__left}>
@@ -297,8 +298,8 @@ const Home = () => {
             <div className={styles.method}>
                 <div className={styles.method__content}>
                     <div className={styles.method__header}>
-                      <IconLight />
-                      <h2>Занятия построены по личной методике</h2>
+                      <div className={styles.method__headerIcon}><IconLight /></div>
+                      <div className={styles.method__headerText}><h2>Занятия построены по личной методике</h2></div>
                     </div>
                     <div className={styles.method__items}>
                       <div className={styles.method__item}>
@@ -353,6 +354,40 @@ const Home = () => {
               </div>
               <div className={styles.reviews__items}>
                 <Carousel slides={slides} autoplay={true} interval={3000} />
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.application}>
+            <div className={styles.application__content}>
+              <div className={styles.application__headline}>
+                <div className={styles.application__headlineIcon}>
+                  <IconLight />
+                  </div>
+                <div className={styles.application__headlineText}>
+                  <p>Оставьте заявку, и я обязательно с вами свяжусь!</p>
+                </div>
+              </div>
+              <div className={styles.application__items}>
+                <div className={styles.application__item}>
+                  <IconContact />
+                </div>
+                <div className={styles.application__item}>
+                    <form className={styles.application__itemForm}>
+                      <div className={styles.application__itemFormInputWrapper}>
+                        <input className={styles.application__itemFormInput} type="text" placeholder="Ваше имя" />
+                      </div>
+                      <div className={styles.application__itemFormInputWrapper}>
+                        <input className={styles.application__itemFormInput} type="text" placeholder="Ваш телефон" />
+                      </div>
+                      <div className={styles.application__itemFormInputWrapper}>
+                        <textarea className={styles.application__itemFormTextarea} placeholder="Ваш вопрос"/>
+                      </div>
+                      <div className={styles.application__itemFormBtnWrapper}>
+                        <button className={styles.application__itemFormBtn}>Записаться</button>
+                      </div>
+                    </form>
+                </div>
               </div>
             </div>
           </div>
