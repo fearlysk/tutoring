@@ -5,9 +5,12 @@ import BoyNo from "../../assets/pages/Home/images/boy__no.png";
 import GirlBomb from "../../assets/pages/Home/images/girl__bomb.png";
 import GirlCry from "../../assets/pages/Home/images/girl__cry.png";
 import BoyWow from "../../assets/pages/Home/images/boy__wow.png";
+import Cursor from "../../assets/pages/Home/images/cursor.png";
 import IconPaper from "../../components/UI/IconPaper";
 import IconLight from "../../components/UI/IconLight";
 import IconTeacher from "../../components/UI/IconTeacher";
+import IconMath from "../../components/UI/IconMath";
+import IconStudy from "../../components/UI/IconStudy";
 import cn from 'classnames';
 import classNames from 'classnames/bind';
 import styles from "./Home.module.scss";
@@ -223,8 +226,6 @@ const Home = () => {
               </div>
 
             </div>  
-
-              <div>
                 <div className={styles.results}>
                     <div className={styles.results__content}>
                       <div className={styles.results__header}>
@@ -272,11 +273,53 @@ const Home = () => {
                           </div>
                         </div>
                       </div>
+                      <div className={styles.results__button}> 
+                          <button>Хочу на занятия!</button>  
+                          <div className={styles.results__cursor}>
+                            <img src={Cursor} width='100px' alt="No img found" />
+                          </div>
+                      </div>
                     </div>
                 </div>
-              </div>  
+              
             
-            <div></div>
+            <div className = {styles.method}>
+                <div className = {styles.method__content}>
+                    <div className = {styles.method__header}>
+                      <IconLight />
+                      <h2>Занятия построены по личной методике</h2>
+                    </div>
+                    <div className = {styles.method__items}>
+                      <div className = {styles.method__item}>
+                          <span>01</span>
+                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
+                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
+                           <div className = {styles.method__itemImage}>
+                             <IconMath />
+                           </div>
+                      </div>
+                      <div className = {styles.method__item}>
+                          <span>02</span>
+                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
+                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
+                           <div className = {styles.method__itemImage}>
+                             <IconMath />
+                           </div>
+                      </div>
+                      <div className = {styles.method__item}>
+                          <span>03</span>
+                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
+                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
+                           <div className = {styles.method__itemImage}>
+                             <IconMath />
+                           </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
     
         </div>
     )
