@@ -541,9 +541,9 @@
 }
 .method__content {
     width: 81.5%;
-    margin: 0 auto;
     padding-top: 50px;
     padding-bottom: 50px;
+    margin: 0 auto;
 }
 .method__header {
     display: flex;
@@ -618,5 +618,34 @@
 @media screen and (max-width: 501px) {
     .method__item {
         width: 70% !important;
+    }
+}
+.reviews__content {
+    width: 81.5%;
+    margin: 50px auto;
+}
+.reviews__headline {
+    display: flex;
+}
+.reviews__headlineText {
+    font-size: 40px;
+    font-family: 'Jura', sans-serif;
+    margin-left: 10px;
+}
+.reviews__headlineMagnifier {
+    margin-left: 10%;
+    position: relative;
+    bottom: 50px;
+    width: 10% !important;
+}
+@media screen and (max-width: 1104px) {
+    .reviews__headlineMagnifier {
+        display: none;
+    }
+    .reviews__items {
+        margin-top: 50px;
+    }
+    .reviews__content {
+        width: 90% !important;
     }
 }

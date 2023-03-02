@@ -1,4 +1,5 @@
 import BackgroundMain from "../../assets/pages/Home/images/main_background.png";
+import BackgroundReviews from "../../assets/pages/Home/images/reviews_background.png";
 import PhotoMain from "../../assets/pages/Home/images/main_photo.png";
 import PhotoAbout from "../../assets/pages/Home/images/about_photo.png";
 import BoyNo from "../../assets/pages/Home/images/boy__no.png";
@@ -6,16 +7,20 @@ import GirlBomb from "../../assets/pages/Home/images/girl__bomb.png";
 import GirlCry from "../../assets/pages/Home/images/girl__cry.png";
 import BoyWow from "../../assets/pages/Home/images/boy__wow.png";
 import Cursor from "../../assets/pages/Home/images/cursor.png";
+import Magnifier from "../../assets/pages/Home/images/magnifier.png";
+import PhoneOne from "../../assets/pages/Home/images/reviews_phone1.png";
+import PhoneTwo from "../../assets/pages/Home/images/reviews_phone2.png";
+import PhoneThree from "../../assets/pages/Home/images/reviews_phone3.png";
 import IconPaper from "../../components/UI/icons/IconPaper";
 import IconLight from "../../components/UI/icons/IconLight";
 import IconTeacher from "../../components/UI/icons/IconTeacher";
 import IconMath from "../../components/UI/icons/IconMath";
 import IconStudy from "../../components/UI/icons/IconStudy";
-import cn from 'classnames';
 import classNames from 'classnames/bind';
 import styles from "./Home.module.scss";
 import useWindowDimensions from "../../utils/getWindowDimensions";
 import IconDream from "../../components/UI/icons/IconDream";
+import { Carousel } from "../../components/Slider/Carousel";
 
 let cx = classNames.bind(styles);
 
@@ -36,6 +41,12 @@ const Home = () => {
       }
       return imgSize;
     }
+
+    let slides = [
+      <img src={PhoneOne} alt="1" />,
+      <img src={PhoneTwo} alt="2" />,
+      <img src={PhoneThree} alt="2" />
+    ]
 
     return (
         <div className={styles.wrapper}>
@@ -326,6 +337,25 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+          <div className={styles.reviews} style={{background: `url(${BackgroundReviews})`}}>
+            <div className={styles.reviews__content}>
+              <div className={styles.reviews__headline}>
+                <div className={styles.reviews__headlineIcon}>
+                  <IconLight />
+                </div>
+                <div className={styles.reviews__headlineText}>
+                  <p>Отзывы родителей и учеников</p>
+                </div>
+                <div className={styles.reviews__headlineMagnifier}>
+                  <img src={Magnifier} width={220} alt="No img found" />
+                </div>
+              </div>
+              <div className={styles.reviews__items}>
+                <Carousel slides={slides} autoplay={true} interval={3000} />
+              </div>
+            </div>
+          </div>
 
         </div>
     )
