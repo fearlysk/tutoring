@@ -6,15 +6,16 @@ import GirlBomb from "../../assets/pages/Home/images/girl__bomb.png";
 import GirlCry from "../../assets/pages/Home/images/girl__cry.png";
 import BoyWow from "../../assets/pages/Home/images/boy__wow.png";
 import Cursor from "../../assets/pages/Home/images/cursor.png";
-import IconPaper from "../../components/UI/IconPaper";
-import IconLight from "../../components/UI/IconLight";
-import IconTeacher from "../../components/UI/IconTeacher";
-import IconMath from "../../components/UI/IconMath";
-import IconStudy from "../../components/UI/IconStudy";
+import IconPaper from "../../components/UI/icons/IconPaper";
+import IconLight from "../../components/UI/icons/IconLight";
+import IconTeacher from "../../components/UI/icons/IconTeacher";
+import IconMath from "../../components/UI/icons/IconMath";
+import IconStudy from "../../components/UI/icons/IconStudy";
 import cn from 'classnames';
 import classNames from 'classnames/bind';
 import styles from "./Home.module.scss";
 import useWindowDimensions from "../../utils/getWindowDimensions";
+import IconDream from "../../components/UI/icons/IconDream";
 
 let cx = classNames.bind(styles);
 
@@ -282,45 +283,50 @@ const Home = () => {
                     </div>
                 </div>
               
-            
-            <div className = {styles.method}>
-                <div className = {styles.method__content}>
-                    <div className = {styles.method__header}>
+            <div className={styles.method}>
+                <div className={styles.method__content}>
+                    <div className={styles.method__header}>
                       <IconLight />
                       <h2>Занятия построены по личной методике</h2>
                     </div>
-                    <div className = {styles.method__items}>
-                      <div className = {styles.method__item}>
-                          <span>01</span>
-                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
-                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
-                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
-                           <div className = {styles.method__itemImage}>
-                             <IconMath />
-                           </div>
+                    <div className={styles.method__items}>
+                      <div className={styles.method__item}>
+                      <div className={styles.method__itemNumber}><p>01</p></div>
+                      <div className={styles.method__itemContent}>
+                        <p className={styles.method__itemContentHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                        <p className={styles.method__itemContentDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам. Ни меня, ни учителя рядом не будет.</p>
+                        <p className={styles.method__itemContentBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить.</p>
+                      </div> 
+                      <div className={styles.method__itemImage}>
+                        <IconMath />
                       </div>
-                      <div className = {styles.method__item}>
-                          <span>02</span>
-                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
-                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
-                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
-                           <div className = {styles.method__itemImage}>
-                             <IconMath />
-                           </div>
                       </div>
-                      <div className = {styles.method__item}>
-                          <span>03</span>
-                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
-                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
-                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
-                           <div className = {styles.method__itemImage}>
-                             <IconMath />
-                           </div>
+                      <div className={styles.method__item}>
+                        <div className={styles.method__itemNumber}><p>02</p></div>
+                        <div className={styles.method__itemContent}>
+                           <p className={styles.method__itemContentHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                           <p className={styles.method__itemContentDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам. Ни меня, ни учителя рядом не будет.</p>
+                           <p className={styles.method__itemContentBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить.</p>
+                        </div>
+                        <div className={styles.method__itemImage}>
+                          <IconStudy />
+                        </div>
+                      </div>
+                      <div className={styles.method__item}>
+                        <div className={styles.method__itemNumber}><p>03</p></div>
+                        <div className={styles.method__itemContent}>
+                          <p className={styles.method__itemContentHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                          <p className={styles.method__itemContentDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам. Ни меня, ни учителя рядом не будет.</p>
+                          <p className={styles.method__itemContentBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить.</p>
+                        </div> 
+                        <div className={styles.method__itemImage}>
+                          <IconDream />
+                        </div>
                       </div>
                     </div>
                 </div>
             </div>
-    
+
         </div>
     )
 }
