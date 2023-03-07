@@ -1,4 +1,5 @@
 import BackgroundMain from "../../assets/pages/Home/images/main_background.png";
+import BackgroundReviews from "../../assets/pages/Home/images/reviews_background.png";
 import PhotoMain from "../../assets/pages/Home/images/main_photo.png";
 import PhotoAbout from "../../assets/pages/Home/images/about_photo.png";
 import BoyNo from "../../assets/pages/Home/images/boy__no.png";
@@ -6,19 +7,26 @@ import GirlBomb from "../../assets/pages/Home/images/girl__bomb.png";
 import GirlCry from "../../assets/pages/Home/images/girl__cry.png";
 import BoyWow from "../../assets/pages/Home/images/boy__wow.png";
 import Cursor from "../../assets/pages/Home/images/cursor.png";
-import IconPaper from "../../components/UI/IconPaper";
-import IconLight from "../../components/UI/IconLight";
-import IconTeacher from "../../components/UI/IconTeacher";
-import IconMath from "../../components/UI/IconMath";
-import IconStudy from "../../components/UI/IconStudy";
-import cn from 'classnames';
+import Magnifier from "../../assets/pages/Home/images/magnifier.png";
+import PhoneOne from "../../assets/pages/Home/images/reviews_phone1.png";
+import PhoneTwo from "../../assets/pages/Home/images/reviews_phone2.png";
+import PhoneThree from "../../assets/pages/Home/images/reviews_phone3.png";
+import IconPaper from "../../components/UI/icons/IconPaper";
+import IconLight from "../../components/UI/icons/IconLight";
+import IconTeacher from "../../components/UI/icons/IconTeacher";
+import IconMath from "../../components/UI/icons/IconMath";
+import IconStudy from "../../components/UI/icons/IconStudy";
 import classNames from 'classnames/bind';
 import styles from "./Home.module.scss";
 import useWindowDimensions from "../../utils/getWindowDimensions";
+import IconDream from "../../components/UI/icons/IconDream";
+import { Carousel } from "../../components/Slider/Carousel";
+import IconContact from "../../components/UI/icons/IconContact";
+import { useState } from 'react';
 
 let cx = classNames.bind(styles);
 
-const Home = () => {
+const Home = ({open, setOpen}) => {
   
     const { width } = useWindowDimensions();
     const itemClassName = cx('mainContent__item', 'mainContent__textItem');
@@ -36,8 +44,15 @@ const Home = () => {
       return imgSize;
     }
 
+    let slides = [
+      <img src={PhoneOne} alt="1" />,
+      <img src={PhoneTwo} alt="2" />,
+      <img src={PhoneThree} alt="2" />
+    ]
+
+
     return (
-        <div className={styles.wrapper}>
+        <div  className={styles.wrapper}>
             <div className={styles.main} style={{background: `url(${BackgroundMain})`}}>
                 <div className={styles.main__container}>
                    <div className={styles.main__header}>
@@ -108,7 +123,7 @@ const Home = () => {
                                      <p>БЕСПЛАТНО</p>
                                   </div>
                                   <div className={styles.mainContent__btn}>
-                                      <button>Записаться на занятие</button>
+                                      <button onClick={() => setOpen(true)}>Записаться на занятие</button>
                                   </div>
                                 </div>
                             </div>
@@ -229,8 +244,8 @@ const Home = () => {
                 <div className={styles.results}>
                     <div className={styles.results__content}>
                       <div className={styles.results__header}>
-                        <IconLight />
-                        <h2>Что тебя ждёт после обучения со мной?</h2>
+                        <div className={styles.results__headerIcon}><IconLight /></div>
+                        <div className={styles.results__headerText}><h2>Что тебя ждёт после обучения со мной?</h2></div>
                       </div>
                       <div className={styles.results__main}>
                         <div className={styles.result__left}>
@@ -274,7 +289,7 @@ const Home = () => {
                         </div>
                       </div>
                       <div className={styles.results__button}> 
-                          <button>Хочу на занятия!</button>  
+                          <button onClick={() => setOpen(true)}>Хочу на занятия!</button>  
                           <div className={styles.results__cursor}>
                             <img src={Cursor} width='100px' alt="No img found" />
                           </div>
@@ -282,46 +297,104 @@ const Home = () => {
                     </div>
                 </div>
               
-            
-            <div className = {styles.method}>
-                <div className = {styles.method__content}>
-                    <div className = {styles.method__header}>
-                      <IconLight />
-                      <h2>Занятия построены по личной методике</h2>
+            <div className={styles.method}>
+                <div className={styles.method__content}>
+                    <div className={styles.method__header}>
+                      <div className={styles.method__headerIcon}><IconLight /></div>
+                      <div className={styles.method__headerText}><h2>Занятия построены по личной методике</h2></div>
                     </div>
-                    <div className = {styles.method__items}>
-                      <div className = {styles.method__item}>
-                          <span>01</span>
-                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
-                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
-                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
-                           <div className = {styles.method__itemImage}>
-                             <IconMath />
-                           </div>
+                    <div className={styles.method__items}>
+                      <div className={styles.method__item}>
+                      <div className={styles.method__itemNumber}><p>01</p></div>
+                      <div className={styles.method__itemContent}>
+                        <p className={styles.method__itemContentHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                        <p className={styles.method__itemContentDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам. Ни меня, ни учителя рядом не будет.</p>
+                        <p className={styles.method__itemContentBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить.</p>
+                      </div> 
+                      <div className={styles.method__itemImage}>
+                        <IconMath />
                       </div>
-                      <div className = {styles.method__item}>
-                          <span>02</span>
-                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
-                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
-                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
-                           <div className = {styles.method__itemImage}>
-                             <IconMath />
-                           </div>
                       </div>
-                      <div className = {styles.method__item}>
-                          <span>03</span>
-                           <p className = {styles.methtod__itemHeader}>Развитие самостоятельности и уверенности в своих силах</p>
-                           <p className = {styles.method__itemDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам.Ни меня, ни учителя рядом не будет.</p>
-                           <p className = {styles.method__itemBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить</p>
-                           <div className = {styles.method__itemImage}>
-                             <IconMath />
-                           </div>
+                      <div className={styles.method__item}>
+                        <div className={styles.method__itemNumber}><p>02</p></div>
+                        <div className={styles.method__itemContent}>
+                           <p className={styles.method__itemContentHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                           <p className={styles.method__itemContentDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам. Ни меня, ни учителя рядом не будет.</p>
+                           <p className={styles.method__itemContentBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить.</p>
+                        </div>
+                        <div className={styles.method__itemImage}>
+                          <IconStudy />
+                        </div>
+                      </div>
+                      <div className={styles.method__item}>
+                        <div className={styles.method__itemNumber}><p>03</p></div>
+                        <div className={styles.method__itemContent}>
+                          <p className={styles.method__itemContentHeader}>Развитие самостоятельности и уверенности в своих силах</p>
+                          <p className={styles.method__itemContentDescr}>Любое вступительное или выпускное испытание ребёнок будет сдавать сам. Ни меня, ни учителя рядом не будет.</p>
+                          <p className={styles.method__itemContentBottom}>Ребёнку нужна уверенность в своих силах, что он сам сможет что-то решить.</p>
+                        </div> 
+                        <div className={styles.method__itemImage}>
+                          <IconDream />
+                        </div>
                       </div>
                     </div>
                 </div>
             </div>
-    
+
+          <div className={styles.reviews} style={{background: `url(${BackgroundReviews})`}}>
+            <div className={styles.reviews__content}>
+              <div className={styles.reviews__headline}>
+                <div className={styles.reviews__headlineIcon}>
+                  <IconLight />
+                </div>
+                <div className={styles.reviews__headlineText}>
+                  <p>Отзывы родителей и учеников</p>
+                </div>
+                <div className={styles.reviews__headlineMagnifier}>
+                  <img src={Magnifier} width={220} alt="No img found" />
+                </div>
+              </div>
+              <div className={styles.reviews__items}>
+                <Carousel slides={slides} autoplay={true} interval={3000} />
+              </div>
+            </div>
+          </div>
+
+          <div className={styles.application}>
+            <div className={styles.application__content}>
+              <div className={styles.application__headline}>
+                <div className={styles.application__headlineIcon}>
+                  <IconLight />
+                  </div>
+                <div className={styles.application__headlineText}>
+                  <p>Оставьте заявку, и я обязательно с вами свяжусь!</p>
+                </div>
+              </div>
+              <div className={styles.application__items}>
+                <div className={styles.application__item}>
+                  <IconContact />
+                </div>
+                <div className={styles.application__item}>
+                    <form className={styles.application__itemForm}>
+                      <div className={styles.application__itemFormInputWrapper}>
+                        <input className={styles.application__itemFormInput} type="text" placeholder="Ваше имя" />
+                      </div>
+                      <div className={styles.application__itemFormInputWrapper}>
+                        <input className={styles.application__itemFormInput} type="text" placeholder="Ваш телефон" />
+                      </div>
+                      <div className={styles.application__itemFormInputWrapper}>
+                        <textarea className={styles.application__itemFormTextarea} placeholder="Ваш вопрос"/>
+                      </div>
+                      <div className={styles.application__itemFormBtnWrapper}>
+                        <button className={styles.application__itemFormBtn}>Записаться</button>
+                      </div>
+                    </form>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
+        
     )
 }
 
