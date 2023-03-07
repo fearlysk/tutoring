@@ -22,10 +22,11 @@ import useWindowDimensions from "../../utils/getWindowDimensions";
 import IconDream from "../../components/UI/icons/IconDream";
 import { Carousel } from "../../components/Slider/Carousel";
 import IconContact from "../../components/UI/icons/IconContact";
+import { useState } from 'react';
 
 let cx = classNames.bind(styles);
 
-const Home = () => {
+const Home = ({open, setOpen}) => {
   
     const { width } = useWindowDimensions();
     const itemClassName = cx('mainContent__item', 'mainContent__textItem');
@@ -49,8 +50,9 @@ const Home = () => {
       <img src={PhoneThree} alt="2" />
     ]
 
+
     return (
-        <div className={styles.wrapper}>
+        <div  className={styles.wrapper}>
             <div className={styles.main} style={{background: `url(${BackgroundMain})`}}>
                 <div className={styles.main__container}>
                    <div className={styles.main__header}>
@@ -121,7 +123,7 @@ const Home = () => {
                                      <p>БЕСПЛАТНО</p>
                                   </div>
                                   <div className={styles.mainContent__btn}>
-                                      <button>Записаться на занятие</button>
+                                      <button onClick={() => setOpen(true)}>Записаться на занятие</button>
                                   </div>
                                 </div>
                             </div>
@@ -287,7 +289,7 @@ const Home = () => {
                         </div>
                       </div>
                       <div className={styles.results__button}> 
-                          <button>Хочу на занятия!</button>  
+                          <button onClick={() => setOpen(true)}>Хочу на занятия!</button>  
                           <div className={styles.results__cursor}>
                             <img src={Cursor} width='100px' alt="No img found" />
                           </div>
@@ -391,8 +393,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-
         </div>
+        
     )
 }
 
