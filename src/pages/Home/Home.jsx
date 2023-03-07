@@ -1,3 +1,4 @@
+import { useState } from "react";
 import BackgroundMain from "../../assets/pages/Home/images/main_background.png";
 import BackgroundReviews from "../../assets/pages/Home/images/reviews_background.png";
 import PhotoMain from "../../assets/pages/Home/images/main_photo.png";
@@ -18,19 +19,40 @@ import IconMath from "../../components/UI/icons/IconMath";
 import IconStudy from "../../components/UI/icons/IconStudy";
 import classNames from 'classnames/bind';
 import styles from "./Home.module.scss";
+import http from "../../services/http";
 import useWindowDimensions from "../../utils/getWindowDimensions";
 import IconDream from "../../components/UI/icons/IconDream";
 import { Carousel } from "../../components/Slider/Carousel";
 import IconContact from "../../components/UI/icons/IconContact";
-import { useState } from 'react';
+import Modal from "../../components/Modal/Modal";
 
 let cx = classNames.bind(styles);
 
-const Home = ({open, setOpen}) => {
+const Home = () => {
   
     const { width } = useWindowDimensions();
     const itemClassName = cx('mainContent__item', 'mainContent__textItem');
     const resultItemClassName = cx('result__leftItem', 'result__leftItemRightSide');
+    const [name, setName] = useState('');
+    const [phoneNumber, setPhoneNumber] = useState('');
+    const [message, setMessage] = useState('');
+    const [open, setOpen] = useState(true);
+
+    const token = process.env.REACT_APP_TOKEN;
+
+    const sendMessage = (e) => {
+     e.preventDefault();
+     const text = `
+      Имя: ${name}                                                                                                         
+      Телефон: ${phoneNumber}
+      Сообщение: ${message}
+    `
+     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=1198808944&text=${text}`;
+     http(url, "GET");
+     setName('');
+     setPhoneNumber('');
+     setMessage('');
+    }
 
     const resizeImage = () => {
       let imgSize;
@@ -50,9 +72,9 @@ const Home = ({open, setOpen}) => {
       <img src={PhoneThree} alt="2" />
     ]
 
-
     return (
-        <div  className={styles.wrapper}>
+        <div className={styles.wrapper}>
+            <Modal open={open} onClose={() => setOpen(false)} />
             <div className={styles.main} style={{background: `url(${BackgroundMain})`}}>
                 <div className={styles.main__container}>
                    <div className={styles.main__header}>
@@ -377,16 +399,33 @@ const Home = ({open, setOpen}) => {
                 <div className={styles.application__item}>
                     <form className={styles.application__itemForm}>
                       <div className={styles.application__itemFormInputWrapper}>
-                        <input className={styles.application__itemFormInput} type="text" placeholder="Ваше имя" />
+                        <input 
+                          className={styles.application__itemFormInput}
+                          type="text"
+                          placeholder="Ваше имя"
+                          value={name}
+                          onChange={(e) => setName(e.target.value)}
+                        />
                       </div>
                       <div className={styles.application__itemFormInputWrapper}>
-                        <input className={styles.application__itemFormInput} type="text" placeholder="Ваш телефон" />
+                        <input
+                          className={styles.application__itemFormInput}
+                          type="number"
+                          placeholder="Ваш телефон"
+                          value={phoneNumber}
+                          onChange={(e) => setPhoneNumber(e.target.value)}
+                        />
                       </div>
                       <div className={styles.application__itemFormInputWrapper}>
-                        <textarea className={styles.application__itemFormTextarea} placeholder="Ваш вопрос"/>
+                        <textarea
+                          className={styles.application__itemFormTextarea}
+                          placeholder="Ваше сообщение"
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
+                        />
                       </div>
                       <div className={styles.application__itemFormBtnWrapper}>
-                        <button className={styles.application__itemFormBtn}>Записаться</button>
+                        <button onClick={(e) => sendMessage(e)} className={styles.application__itemFormBtn}>Записаться</button>
                       </div>
                     </form>
                 </div>
@@ -394,7 +433,6 @@ const Home = ({open, setOpen}) => {
             </div>
           </div>
         </div>
-        
     )
 }
 
