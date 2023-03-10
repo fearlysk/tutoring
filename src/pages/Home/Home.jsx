@@ -12,6 +12,8 @@ import Magnifier from "../../assets/pages/Home/images/magnifier.png";
 import PhoneOne from "../../assets/pages/Home/images/reviews_phone1.png";
 import PhoneTwo from "../../assets/pages/Home/images/reviews_phone2.png";
 import PhoneThree from "../../assets/pages/Home/images/reviews_phone3.png";
+import PhoneFour from "../../assets/pages/Home/images/reviews_phone4.png";
+import PhoneFive from "../../assets/pages/Home/images/reviews_phone5.png";
 import IconPaper from "../../components/UI/icons/IconPaper";
 import IconLight from "../../components/UI/icons/IconLight";
 import IconTeacher from "../../components/UI/icons/IconTeacher";
@@ -36,22 +38,34 @@ const Home = () => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
     const [message, setMessage] = useState('');
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
+    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const token = process.env.REACT_APP_TOKEN;
 
     const sendMessage = (e) => {
      e.preventDefault();
      const text = `
-      Имя: ${name}                                                                                                         
-      Телефон: ${phoneNumber}
+      Имя: ${name}                                                                                                                                                      
+      Телефон: ${phoneNumber}                                                                                                                                                       
       Сообщение: ${message}
     `
-     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=1198808944&text=${text}`;
+     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=-935795902&text=${text}`;
      http(url, "GET");
      setName('');
      setPhoneNumber('');
      setMessage('');
+     setIsSubmitted(true);
+     setOpen(true);
+    }
+
+    const closeModal = () => {
+      setOpen(false);
+      setIsSubmitted(false);
+    }
+
+    const setSubmitted = () => {
+      setIsSubmitted(true);
     }
 
     const resizeImage = () => {
@@ -67,14 +81,16 @@ const Home = () => {
     }
 
     let slides = [
-      <img src={PhoneOne} alt="1" />,
-      <img src={PhoneTwo} alt="2" />,
-      <img src={PhoneThree} alt="2" />
+      <img width={280} src={PhoneOne} alt="1" />,
+      <img width={280} src={PhoneTwo} alt="2" />,
+      <img width={280} src={PhoneThree} alt="3" />,
+      <img width={280} src={PhoneFour} alt="4" />,
+      <img width={280} src={PhoneFive} alt="5" />
     ]
 
     return (
         <div className={styles.wrapper}>
-            <Modal open={open} onClose={() => setOpen(false)} />
+            <Modal open={open} onClose={closeModal} isSubmitted={isSubmitted} setIsSubmitted={setSubmitted} />
             <div className={styles.main} style={{background: `url(${BackgroundMain})`}}>
                 <div className={styles.main__container}>
                    <div className={styles.main__header}>
@@ -397,11 +413,12 @@ const Home = () => {
                   <IconContact />
                 </div>
                 <div className={styles.application__item}>
-                    <form className={styles.application__itemForm}>
+                    <form onSubmit={(e) => sendMessage(e)} className={styles.application__itemForm}>
                       <div className={styles.application__itemFormInputWrapper}>
                         <input 
                           className={styles.application__itemFormInput}
                           type="text"
+                          required
                           placeholder="Ваше имя"
                           value={name}
                           onChange={(e) => setName(e.target.value)}
@@ -411,6 +428,7 @@ const Home = () => {
                         <input
                           className={styles.application__itemFormInput}
                           type="number"
+                          required
                           placeholder="Ваш телефон"
                           value={phoneNumber}
                           onChange={(e) => setPhoneNumber(e.target.value)}
@@ -420,12 +438,13 @@ const Home = () => {
                         <textarea
                           className={styles.application__itemFormTextarea}
                           placeholder="Ваше сообщение"
+                          required
                           value={message}
                           onChange={(e) => setMessage(e.target.value)}
                         />
                       </div>
                       <div className={styles.application__itemFormBtnWrapper}>
-                        <button onClick={(e) => sendMessage(e)} className={styles.application__itemFormBtn}>Записаться</button>
+                        <button type="submit" className={styles.application__itemFormBtn}>Записаться</button>
                       </div>
                     </form>
                 </div>
