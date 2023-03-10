@@ -47,7 +47,7 @@ const Home = () => {
       Телефон: ${phoneNumber}
       Сообщение: ${message}
     `
-     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=1198808944&text=${text}`;
+     const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=-935795902&text=${text}`;
      http(url, "GET");
      setName('');
      setPhoneNumber('');
