@@ -1,20 +1,28 @@
 {
   "files": {
-    "main.css": "/tutoring/static/css/main.1717a046.css",
-    "main.js": "/tutoring/static/js/main.6c1a2448.js",
+    "main.css": "/tutoring/static/css/main.5042c267.css",
+    "main.js": "/tutoring/static/js/main.478aacde.js",
     "static/media/about_photo.png": "/tutoring/static/media/about_photo.2048fe062de81b9dbba7.png",
     "static/media/main_background.png": "/tutoring/static/media/main_background.cb843dc02172c4b2deaf.png",
     "static/media/main_photo.png": "/tutoring/static/media/main_photo.be8ad724074d42bfd8f9.png",
+    "static/media/reviews_phone3.png": "/tutoring/static/media/reviews_phone3.c5a40fc03ddda4ad2621.png",
+    "static/media/reviews_background.png": "/tutoring/static/media/reviews_background.7e5c06b8497352ed3f4c.png",
+    "static/media/JosefinSans-Italic-VariableFont_wght.ttf": "/tutoring/static/media/JosefinSans-Italic-VariableFont_wght.5747f005bcd21b1d8b23.ttf",
+    "static/media/reviews_phone5.png": "/tutoring/static/media/reviews_phone5.33b425ca96f17eb22f48.png",
+    "static/media/reviews_phone4.png": "/tutoring/static/media/reviews_phone4.f4ad721abf9060dde262.png",
+    "static/media/reviews_phone2.png": "/tutoring/static/media/reviews_phone2.a4f853a326b0491e0e0f.png",
     "static/media/boy__no.png": "/tutoring/static/media/boy__no.9aa213934c7079dcd61f.png",
+    "static/media/reviews_phone1.png": "/tutoring/static/media/reviews_phone1.52415a7889c9d73c92a7.png",
+    "static/media/magnifier.png": "/tutoring/static/media/magnifier.b2de280054cd1262e91d.png",
     "static/media/girl__bomb.png": "/tutoring/static/media/girl__bomb.7328e91ff67c54fcf141.png",
     "static/media/girl__cry.png": "/tutoring/static/media/girl__cry.f63a02752f6aa80b3e40.png",
     "static/media/boy__wow.png": "/tutoring/static/media/boy__wow.3136c4b4395b8c854fe8.png",
     "index.html": "/tutoring/index.html",
-    "main.1717a046.css.map": "/tutoring/static/css/main.1717a046.css.map",
-    "main.6c1a2448.js.map": "/tutoring/static/js/main.6c1a2448.js.map"
+    "main.5042c267.css.map": "/tutoring/static/css/main.5042c267.css.map",
+    "main.478aacde.js.map": "/tutoring/static/js/main.478aacde.js.map"
   },
   "entrypoints": [
-    "static/css/main.1717a046.css",
-    "static/js/main.6c1a2448.js"
+    "static/css/main.5042c267.css",
+    "static/js/main.478aacde.js"
   ]
 }
