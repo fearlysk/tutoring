@@ -83,6 +83,14 @@
     .modal__card {
         width: 70%;
     }
+    .modal__contentThanks > p {
+        margin: 10px 3% !important;
+        text-align: left !important;
+    }
+    .modal__contentThanks > p:nth-child(3), p:nth-child(4) {
+        margin: 15px 8% !important;
+        text-align: left !important;
+    }
 }
 @media screen and (max-width: 762px) {
     .modal__header {
@@ -96,6 +104,9 @@
     .modal__card {
         width: 80%;
     }
+    .modal__thanksHeadline {
+        font-size: 32px !important;
+    }
 }
 @media screen and (max-width: 470px) {
     .modal__input {
@@ -106,4 +117,71 @@
     .modal__btn {
         padding: 15px 30px;
     }
+    .modal__thanksHeadline {
+        font-size: 22px !important;
+    }
+    .modal__contentThanksNumber {
+        text-align: left !important;
+    }
+}
+@media screen and (max-width: 281px) {
+    .modal__thanksHeadline {
+        font-size: 16px !important;
+    }
+    .modal__contentThanks > p {
+        margin: 10px 3% !important;
+        text-align: left !important;
+        font-size: 10px !important;
+        width: 100%;
+    }
+    .modal__contentThanks > p:nth-child(3), p:nth-child(4) {
+        margin: 10px 8% !important;
+        text-align: left !important;
+    }
+}
+@media screen and (max-height: 566px) {
+    .modal__thanksHeadline {
+        font-size: 22px !important;
+    }
+    .modal__contentThanks > p {
+        margin: 7px 3% !important;
+        text-align: left !important;
+        font-size: 16px !important;
+        width: 100%;
+    }
+    .modal__contentThanks > p:nth-child(3), p:nth-child(4) {
+        margin: 10px 8% !important;
+        text-align: left !important;
+    }
+}
+.modal__thanksHeadline {
+    color: #0390FB;
+    font-size: 40px;
+}
+.modal__contentThanks {
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px auto;
+}
+.modal__contentThanks > p {
+    margin: 30px 3%;
+    text-align: center;
+}
+.modal__contentThanks > p:nth-child(3), p:nth-child(4) {
+    margin: 40px 8%;
+    text-align: center;
+}
+.modal__contentThanksHighlighted {
+    margin-left: 5px;
+}
+.modal__contentThanksHighlighted, .modal__contentThanksNumber {
+    color: #0390FB;
+}
+.modal__contentThanksNumber {
+    margin: 10px 0 0 0 !important;
+    text-align: center;
+    font-size: 24px;
+    width: 100%;
+    text-decoration: underline;
 }
