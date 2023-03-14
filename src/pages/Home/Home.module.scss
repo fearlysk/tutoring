@@ -293,13 +293,9 @@
     }
 }
 @media screen and (max-width: 700px) {
-    .about__contentItem > h1 {
-        font-size: 30px;
-    }
     .about__contentItem > p {
         font-size: 16px;
     }
-
 }
 @media screen and (max-width: 550px) {
     .about {
@@ -326,7 +322,6 @@
 }
 .situations__header {
     display: flex;
-    align-items: center;
 }
 .situations__content h2 {
     margin-left: 10px;
@@ -389,9 +384,6 @@
     }
 }
 @media screen and (max-width: 1000px) {
-    .situations__content h2 {
-        font-size: 20px;
-    }
     .situations__text p {
         font-size: 15px;
     }
@@ -555,8 +547,8 @@
     color: #FFFFFF;
 }
 @media screen and (max-width: 390px) {
-    .method__headerText > h2, .results__headerText > h2 {
-        font-size: 32px;
+    .method__headerText > h2, .results__headerText > h2, .reviews__headlineText > p, .application__headlineText > p{
+        font-size: 25px;
     }
 }
 .method__items {
@@ -663,7 +655,7 @@
 }
 .application__content {
     width: 81.5%;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-left: auto;
     margin-right: auto;
 }
