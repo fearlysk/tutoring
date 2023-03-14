@@ -82,7 +82,7 @@
 }
 @media screen and (max-width: 517px) {
     .mainContent__btnWrapper {
-        width: 320px !important;
+        width: 330px !important;
     }
     .mainContent__headline {
         font-size: 35px !important;
@@ -626,6 +626,7 @@
 }
 .reviews {
     padding-bottom: 50px;
+    height: 700px;
 }
 .reviews__content {
     width: 81.5%;
@@ -690,6 +691,11 @@
         right: 4%;
     }
 }
+@media screen and (max-width: 470px) {
+    .reviews {
+        height: 560px;
+    }
+}
 @media screen and (max-width: 385px) {
     .application__headlineText {
         font-size: 32px;
@@ -697,6 +703,11 @@
     .application__itemForm {
         position: relative;
         right: 7%;
+    }
+}
+@media screen and (max-width: 360px) {
+    .reviews {
+        height: 530px;
     }
 }
 .application__item {
